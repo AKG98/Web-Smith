@@ -1,0 +1,59 @@
+*{
+  margin: 0 ;
+  padding: 0 ;
+  box-sizing: border-box ;
+}
+
+::-webkit-scrollbar{
+  display: none;
+  
+}
+.dark{
+  --body-bg-color:rgb(60, 60, 60);
+  --logo-filter-property:none;
+  --editor-title-bg:rgb(22, 22, 22);
+  --mode-font-color:white;
+  --output-bg-color:#282C34;
+}
+.light{
+  --body-bg-color:rgb(174, 174, 174);
+  --logo-filter-property:invert();
+  --editor-title-bg:#E0DDDD;
+  --mode-font-color:black;
+  --output-bg-color:#FFFFFF;
+}
+/* Custom CSS to flip horizontally */
+.flip-horizontal {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+/* Custom CSS to rotate clockwise */
+.rotate-clockwise {
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+
+body{
+  background-color: var(--body-bg-color) !important;
+  overflow-x: hidden;
+}
+.navbar-brand img{
+  filter: var(--logo-filter-property);
+}
+.card{
+  border: none;
+}
+.editor-title{
+  background-color: var(--editor-title-bg);
+  color: var(--mode-font-color);
+}
+
+.code-mirror{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.output-container{
+  background-color: var(--output-bg-color) ;
+}
